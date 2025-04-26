@@ -6,7 +6,6 @@ public class Album {
         private PhotoManager manager;
         private int NbComps;
 
-        // Constructor
         public Album(String name, String condition, PhotoManager manager)
         {
             this.name = name;
@@ -15,19 +14,18 @@ public class Album {
             NbComps =0;
         }
         
-        // Return the name of the album
+    
         public String getName()
         {
             return name;
         }
         
-        // Return the condition associated with the album
+
         public String getCondition()
         {
             return condition;
         }
 
-        // Return the manager
         public PhotoManager getManager()
         {
         	
@@ -35,7 +33,7 @@ public class Album {
             return manager;
         }
    
-        // Return all photos that satisfy the album condition
+
         public LinkedList<Photo> getPhotos()
         {
                 LinkedList<Photo> Rphotos = new LinkedList<Photo>();
@@ -62,14 +60,14 @@ public class Album {
                     while ( ! Rphotos.last())
                     {
                         Photo photo = Rphotos.retrieve();
-                        //System.out.println("test " + photo.getPath());
+         
                         if ( ! allAvilable (photo.allTags , Array ))
                             Rphotos.remove();
                         else
                             Rphotos.findNext();
                     }
                     Photo photo11 = Rphotos.retrieve();
-                    //System.out.println("testlast " + photo11.getPath());
+   
                     if ( ! allAvilable (photo11.allTags , Array ))
                         Rphotos.remove();
                     else
@@ -78,7 +76,7 @@ public class Album {
                 return Rphotos;
         }
        
-        // Return the number of tag comparisons used to find all photos of the album
+
         public int getNbComps()
         {
             return NbComps;
@@ -99,8 +97,7 @@ public class Album {
 
                     while (!AllTags.last())
                     {
-                        this.NbComps ++ ;    
-                        //System.out.println(AllTags.retrieve() + " " + Array[i]);
+
                         if (AllTags.retrieve().compareToIgnoreCase(Array[i]) == 0)
                         {
                             found_in_tags = true;
