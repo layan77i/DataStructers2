@@ -10,9 +10,9 @@ public class PhotoManager {
     }
 
    
-    public void addPhoto(Photo newPhoto) {
-        if (!isPhotoExists(newPhoto.getPath(), photoList)) {
-            photoList.insert(newPhoto);
+    public void addPhoto(Photo P) {
+        if (!isPhotoExists(P.getPath(), photoList)) {
+            photoList.insert(P);
         }
     }
 
