@@ -6,7 +6,7 @@ public class InvAlbum {
     private InvIndexPhotoManager invmanager;
     private int NbComps;
 
-    // Constructor
+  
     public InvAlbum(String name, String condition, InvIndexPhotoManager manager)
     {
         this.name = name;
@@ -15,25 +15,24 @@ public class InvAlbum {
         NbComps =0 ;
     }
     
-    // Return the name of the album
     public String getName()
     {
         return name;
     }
     
-    // Return the condition associated with the album
+   
     public String getCondition()
     {
         return condition;
     }
 
-    // Return the manager
+   
     public InvIndexPhotoManager getManager()
     {
         return invmanager;
     }
     
-    // Return all photos that satisfy the album condition
+  
     public LinkedList<Photo> getPhotos()
     {
         BST<LinkedList<Photo>> photosBST = invmanager.getPhotos();
@@ -79,7 +78,6 @@ public class InvAlbum {
         return Rphotos;
     }
    
-    // Return the number of tag comparisons used to find all photos of the album
     public int getNbComps()
     {
         return NbComps;
