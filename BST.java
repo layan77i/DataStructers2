@@ -90,7 +90,7 @@ public class BST<T> {
        }
 
        public boolean remove_key (String tkey){
-               Boolean removed = new Boolean(false);
+               Boolean removed = false;
                BSTNode<T> p;
                p = remove_aux(tkey, root, removed);
                current = root = p;
